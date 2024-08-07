@@ -6,7 +6,6 @@ buildscript {
 plugins {
 	id 'com.palantir.git-version' version '0.7.1'
 	id 'co.riiid.gradle' version '0.4.2'
-	id 'com.jfrog.bintray' version '1.8.4'
 	id 'com.matthewprenger.cursegradle' version '1.0.10'
 }
 
@@ -175,8 +174,8 @@ ext {
 
 	sec_curseforge_key = System.getenv('CURSEFORGE_TOKEN') ?: project.isProperty('api_key_curseforge') ? project.api_key_curseforge : null
 	sec_github_key = System.getenv('GITHUB_TOKEN') ?: project.isProperty('api_key_github') ? project.api_key_github : null
-	sec_bintray_user = System.getenv('BINTRAY_USER') ?: project.isProperty('api_user_bintray') ? project.api_user_bintray : null
-	sec_bintray_key = System.getenv('BINTRAY_KEY') ?: project.isProperty('api_key_bintray') ? project.api_key_github : null
+	sec_bintray_user = null
+	sec_bintray_key = null
 }
 
 // Configure Subprojects
